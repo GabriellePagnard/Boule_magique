@@ -7,21 +7,27 @@
     <title>Boule Magique</title>
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
+
     <link rel="icon" href="ressources/favicon.ico" type="image/x-icon" />
-    
+
     <!-- Style personnalisé -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('ressources/background.jpg');">
+<body class="bg-cover bg-center h-screen flex flex-col items-center justify-center" style="background-image: url('ressources/background.jpg');">
+
+   <!-- Titre principal mystique -->
+   <h1 class="text-white text-5xl font-bold mb-8 mystic-title">Boule Magique</h1>
 
     <div id="app" class="text-center">
-        <!-- Container de la boule -->
+        <!-- Conteneur de la boule magique -->
         <div id="ball-container" class="relative mx-auto mb-8" style="width: 400px; height: 400px;">
             <!-- Image de la boule -->
             <img id="magic-ball" src="ressources/boulle.png" alt="Boule Magique" class="w-full h-full object-cover rounded-full transition-transform duration-700">
         </div>
+
+        <!-- Sous-titre mystique -->
+        <h2 id="subtitle" class="text-white text-2xl font-semibold mb-6 mystic-subtitle">Concentre-toi et pose tes questions à la boule magique...</h2>
 
         <!-- Bouton pour afficher la réponse -->
         <button id="get-answer" class="bg-gray-800 text-white uppercase py-4 px-8 rounded-lg text-lg font-bold transition transform hover:bg-blue-300 hover:text-blue-900 mb-8">

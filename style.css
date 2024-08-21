@@ -1,4 +1,26 @@
-/* Container de la boule */
+/* Styles mystiques pour le titre principal */
+.mystic-title {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    animation: mystic-glow 3s ease-in-out infinite alternate;
+}
+
+.mystic-subtitle {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    font-style: italic;
+}
+
+/* Animation d'aura mystique pour le titre principal */
+@keyframes mystic-glow {
+    from {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        text-shadow: 4px 4px 16px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Conteneur de la boule magique, contrôle la perspective pour l'animation 3D */
 #ball-container {
     perspective: 1000px;
     position: relative;
@@ -6,12 +28,12 @@
     height: 400px;
 }
 
-/* Image de la boule (avant et après retournement) */
+/* Image de la boule avant et après le retournement */
 #ball-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%; /* Forme circulaire */
     position: absolute;
     top: 0;
     left: 0;
@@ -23,28 +45,28 @@
     transform-style: preserve-3d;
 }
 
+/* Classe pour déclencher le retournement de la boule */
 #magic-ball.flipped {
     transform: rotateY(180deg);
 }
 
-/* Style de l'image floutée */
+/* Style de l'image floutée (utilisée en arrière-plan de la réponse) */
 #blurred-layer {
-    filter: blur(10px); /* Ajuste l'intensité du flou selon tes préférences */
+    filter: blur(10px); /* Ajuste l'intensité du flou selon les préférences */
 }
 
-
-/* Cadre pour la réponse (exactement de la taille de la boule) */
+/* Cadre pour afficher la réponse, taille ajustée à la boule */
 #response-frame {
     position: absolute;
     top: 13%;
     left: 18%;
-    width: 67%; /* Le cadre couvre toute la boule */
+    width: 67%; /* Le cadre couvre une partie centrale de la boule */
     height: 67%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Couleur de fond semi-transparente */
     color: white;
     text-align: center;
     padding: 20px;
@@ -53,20 +75,19 @@
     overflow: hidden; /* Empêche le texte de dépasser */
 }
 
-/* Ajustement du texte pour qu'il s'adapte à l'intérieur du cadre */
+/* Ajustement du texte pour qu'il reste centré et à l'intérieur du cadre */
 #response-frame p {
     max-width: 80%;
     word-wrap: break-word;
     word-break: break-word;
-    font-size: 1.6rem; /* Ajuste la taille du texte */
+    font-size: 1.6rem; /* Taille du texte ajustée */
     font-weight: bold;
     color: white;
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
 }
 
-/* Réduire la taille du texte si nécessaire pour l'adapter à l'intérieur du cadre sur les petits écrans */
+/* Adaptation de la taille pour les petits écrans */
 @media (max-width: 768px) {
     #ball-container {
         width: 300px;
