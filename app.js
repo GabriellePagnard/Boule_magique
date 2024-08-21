@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "Les astres ne sont pas alignés pour ça",
     "C’est très improbable",
     "Oublie ça, ce n’est pas pour toi",
+    "Oui",
+    "Non",
+    "Peut-être",
   ];
 
   /**
