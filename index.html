@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boule Magique 8</title>
-    <!-- Importation de Tailwind CSS -->
+    <title>Boule Magique</title>
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Style personnalisé -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 flex items-center justify-center h-screen">
-    <div id="magic-ball" class="bg-black w-64 h-64 rounded-full flex items-center justify-center relative cursor-pointer shadow-lg hover:scale-105 transform transition">
-        <div class="bg-gray-800 w-40 h-40 rounded-full flex items-center justify-center text-center text-white text-2xl font-bold">
-            <span id="answer" class="px-2">8</span>
+
+<body class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('ressources/background.jpg');">
+
+    <div id="app" class="text-center">
+        <!-- Container de la boule -->
+        <div id="ball-container" class="relative mx-auto mb-8" style="width: 400px; height: 400px;">
+            <!-- Image de la boule -->
+            <img id="magic-ball" src="ressources/boulle.png" alt="Boule Magique" class="w-full h-full object-cover rounded-full transition-transform duration-700">
         </div>
+
+        <!-- Bouton pour afficher la réponse -->
+        <button id="get-answer" class="bg-gray-800 text-white uppercase py-4 px-8 rounded-lg text-lg font-bold transition transform hover:bg-blue-300 hover:text-blue-900 mb-8">
+            Réponse
+        </button>
+
+        <!-- Bouton pour poser une autre question (caché par défaut) -->
+        <button id="ask-another" class="bg-gray-800 text-white uppercase py-4 px-8 rounded-lg text-lg font-bold transition transform hover:bg-blue-300 hover:text-blue-900 hidden">
+            Poser une autre question
+        </button>
     </div>
 
+    <!-- JavaScript -->
     <script src="app.js"></script>
 </body>
+
 </html>
