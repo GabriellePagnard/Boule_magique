@@ -20,6 +20,28 @@
     }
 }
 
+/* Styles mystiques pour le sous-titre */
+.mystic-subtitle {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    font-style: italic;
+}
+
+/* Ajustements responsives avec Tailwind */
+@media (max-width: 768px) {
+    .mystic-subtitle {
+        font-size: 1.25rem; /* Réduction de la taille pour les écrans mobiles */
+        margin-bottom: 1.5rem; /* Ajustement de l'espacement en bas */
+    }
+}
+
+@media (max-width: 480px) {
+    .mystic-subtitle {
+        font-size: 1rem; /* Réduction supplémentaire pour les très petits écrans */
+        margin-bottom: 1rem;
+        padding: 0 1rem; /* Ajoute un peu d'espace à l'intérieur pour éviter de toucher les bords */
+    }
+}
+
 /* Conteneur de la boule magique, contrôle la perspective pour l'animation 3D */
 #ball-container {
     perspective: 1000px;
